@@ -1,2 +1,6 @@
 #!/bin/bash
-ls -la . .. /boot | tr -s ' ' | cut -d' ' -f1-5,9
+#
+# 11-lists: liste en format long tous les fichiers (y compris cachés)
+# dans le répertoire courant, le répertoire parent et /boot
+
+ls -la . .. /boot
