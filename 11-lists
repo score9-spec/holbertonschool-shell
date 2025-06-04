@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Liste des fichiers dans le répertoire courant
+echo "Répertoire courant :"
+ls -la
+
+# Liste des fichiers dans le répertoire parent
+echo -e "\nRépertoire parent :"
+ls -la ..
+
+# Liste des fichiers dans le répertoire /boot
+echo -e "\nRépertoire /boot :"
+ls -la /boot
