@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Vérifie si le fichier existe
+if [ -e /tmp/iamafile ]; then
+    # Affiche le type du fichier
+    file /tmp/iamafile
+else
+    echo "Le fichier /tmp/iamafile n'existe pas."
+fi
+
