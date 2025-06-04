@@ -1,1 +1,2 @@
-find . -maxdepth 1 -type f -name "*.html" -exec bash -c 'for f; do [ ! -f "../$(basename "$f")" ] || [ "$f" -nt "../$(basename "$f")" ]; then cp "$f" ..; done' _ {} +
+#!/bin/bash
+for f in *.html; do if [ ! -f "../$f" ] || [ "$f" -nt "../$f" ]; then cp "$f" ..; fi done
