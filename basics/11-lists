@@ -1,6 +1,2 @@
 #!/bin/bash
-#
-# 11-lists: liste en format long tous les fichiers (y compris cachés)
-# dans le répertoire courant, le répertoire parent et /boot
-
 ls -la . .. /boot
