@@ -1,0 +1,24 @@
+#!/bin/bash
+
+if [ "$(pwd)" = "/" ]; then
+    echo "Erreur: Vous êtes déjà à la racine du système de fichiers."
+    exit 1
+fi
+
+parent_dir="$(dirname "$(pwd)")"
+
+for file in *.html; do
+    if [ -f "$file" ]; then
+        dest_file="$parent_dir/$file"
+
+        if [ ! -f "$dest_file" ]; then
+            cp "$file" "$dest_file"
+            echo "Copie de $file vers le répertoire parent (nouveau fichier)"
+        else
+            if [ "$file" -nt "$dest_file" ]; then
+                cp "$file" "$dest_file"
+                echo "Copie de $file vers le répertoire parent (fichier plus récent)"
+            fi
+        fi
+    fi
+done
