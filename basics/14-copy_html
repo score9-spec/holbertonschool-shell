@@ -1,3 +1,2 @@
 #!/bin/bash
-for f in *.html; do [ -f "$f" ] && { [ ! -f "../$f" ] || [ "$f" -nt "../$f" ]; } && cp "$f" "../$f"; done
-
+find . -maxdepth 1 -name "*.html" -exec cp -u {} .. \;
